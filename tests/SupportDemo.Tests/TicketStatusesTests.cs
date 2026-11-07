@@ -12,7 +12,7 @@ public class TicketStatusesTests
     [InlineData("Closed")]
     public void IsValid_KnownStatus_ReturnsTrue(string status)
     {
-        Assert.False(TicketStatuses.IsValid(status));
+        Assert.True(TicketStatuses.IsValid(status));
     }
 
     [Theory]
