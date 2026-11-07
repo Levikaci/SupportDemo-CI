@@ -1,4 +1,4 @@
-# SupportDemo — учебный проект для лабораторной работы № 2
+# SupportDemo - учебный проект для лабораторной работы № 2
 
 **Технологии:** ASP.NET Core Minimal API (.NET 9), Npgsql, PostgreSQL.
 
@@ -86,7 +86,7 @@ dotnet run
 curl -i http://localhost:8080/health/db
 ```
 
-Ожидаемый код при корректном подключении — `200`.
+Ожидаемый код при корректном подключении - `200`.
 
 ## 5. Проверка HTTP API
 
@@ -124,7 +124,7 @@ curl -i -X PATCH http://localhost:8080/api/tickets/1/status \
 
 Команды с переносами `\` предназначены для Bash; в Windows можно воспользоваться `Requests/SupportDemo.http`, PowerShell `Invoke-RestMethod` либо указать весь curl-запрос одной строкой.
 
-Ошибки: незаполненный `title`/`description` или недопустимый `status` — `400`, неизвестный ID — `404`.
+Ошибки: незаполненный `title`/`description` или недопустимый `status` - `400`, неизвестный ID - `404`.
 
 ## 6. Требования к будущему Docker Compose
 
@@ -144,7 +144,7 @@ curl -i -X PATCH http://localhost:8080/api/tickets/1/status \
 Host=db;Port=5432;Database=supportdb;Username=supportuser;Password=<локальный пароль из окружения>
 ```
 
-`db` — DNS-имя сервиса PostgreSQL в общей сети Compose. `localhost` внутри контейнера API не ведёт к другому контейнеру.
+`db` - DNS-имя сервиса PostgreSQL в общей сети Compose. `localhost` внутри контейнера API не ведёт к другому контейнеру.
 
 На шаге проверки одиночного контейнера `/health` доступен без PostgreSQL. Проверка `/health/db` и операций с заявками проводится после запуска БД.
 
